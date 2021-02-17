@@ -1,3 +1,9 @@
+import MobileLegacyOrder
+import Foundation
+
 struct MobileUpload {
-    var text = "Hello, World!"
+    let id = UUID()
+    var status: MobileUploadStatus = .Open
+    
+    var mobileOrders: [MobileOrder] = []
 }
