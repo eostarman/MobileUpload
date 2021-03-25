@@ -13,7 +13,7 @@ let package = Package(
             targets: ["MobileUpload"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
+        .package(path: "../MobileLegacyOrder")
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
@@ -21,9 +21,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MobileUpload",
-            dependencies: []),
+            dependencies: ["MobileLegacyOrder"]),
         .testTarget(
             name: "MobileUploadTests",
-            dependencies: ["MobileUpload"]),
+            dependencies: ["MobileUpload", "MobileLegacyOrder"]),
     ]
 )
