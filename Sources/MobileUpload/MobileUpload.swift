@@ -5,5 +5,5 @@ struct MobileUpload {
     let id = UUID()
     var status: MobileUploadStatus = .Open
     
-    var mobileOrders: [MobileOrder] = []
+    var legacyOrders: [LegacyOrder] = []
 }
